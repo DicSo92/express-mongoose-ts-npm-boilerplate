@@ -21,8 +21,8 @@ passport.use(jwtStrategy)
 passport.use(anonymousStrategy)
 
 if (!IS_TEST) {
-  app.use(morganSuccessHandler)
-  app.use(morganErrorHandler)
+    app.use(morganSuccessHandler)
+    app.use(morganErrorHandler)
 }
 
 // set security HTTP headers
@@ -44,14 +44,14 @@ app.use(compression())
 app.use(cors())
 
 app.get('/', (_req: never, res: { send: (arg0: string) => void }) => {
-  res.send('Healthy')
+    res.send('Healthy')
 })
 
 app.use(APP_PREFIX_PATH, routes)
 
 // send back a 404 error for any unknown api request
 app.use((_req: any, _res: any, next: (arg0: ApiError) => void) => {
-  next(new ApiError(httpStatus.NOT_FOUND, 'Not found'))
+    next(new ApiError(httpStatus.NOT_FOUND, 'Not found'))
 })
 
 // convert error to ApiError, if needed
