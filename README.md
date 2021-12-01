@@ -188,11 +188,11 @@ To prevent a certain file or directory from being linted, add it to  `.eslintign
 To maintain a consistent coding style across different IDEs, the project contains  `.editorconfig`
 
 ## Contributing
-Contributions are welcome! Please check out the  [contributing guide](https://github.com/MrBrown6210/nodejs-express-mongoose-typescript-boilerplate/blob/main/CONTRIBUTING.md).
+Contributions are welcome! Please check out the  [contributing guide](https://github.com/DicSo92/express-mongoose-ts-npm-boilerplate/blob/main/CONTRIBUTING.md).
 
 ## Inspirations
 
--  **[hagopj13/node-express-boilerplate](https://github.com/hagopj13/node-express-boilerplate)**
+-  **[MrBrown6210/nodejs-express-mongoose-typescript-boilerplate](https://github.com/MrBrown6210/nodejs-express-mongoose-typescript-boilerplate)**
 
 ## License
-[MIT](https://github.com/MrBrown6210/nodejs-express-mongoose-typescript-boilerplate/blob/master/LICENSE)
+[MIT](https://github.com/DicSo92/express-mongoose-ts-npm-boilerplate/blob/main/LICENSE)
