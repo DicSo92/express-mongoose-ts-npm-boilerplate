@@ -28,7 +28,11 @@ describe('Store Routes', () => {
 
   describe('POST /stores', () => {
     it('should return store with 200 status', async () => {
-      const res = await request(app).post('/stores').set('Authorization', `bearer ${token}`).send({ store: newStore }).expect(200)
+      const res = await request(app)
+        .post('/stores')
+        .set('Authorization', `bearer ${token}`)
+        .send({ store: newStore })
+        .expect(200)
       expect(res.body).toHaveProperty('name')
       expect(res.body).toHaveProperty('description')
       expect(res.body).toHaveProperty('image')
@@ -42,7 +46,6 @@ describe('Store Routes', () => {
     it('should return 401 status if unauthorization', async () => {
       await request(app).post('/stores').send({ store: newStore }).expect(401)
     })
-
   })
 
   describe('GET /stores', () => {
@@ -54,7 +57,11 @@ describe('Store Routes', () => {
 
   describe('GET /store', () => {
     it('should return store with 200 status ', async () => {
-      const resInsert = await request(app).post('/stores').set('Authorization', `bearer ${token}`).send({ store: newStore }).expect(200)
+      const resInsert = await request(app)
+        .post('/stores')
+        .set('Authorization', `bearer ${token}`)
+        .send({ store: newStore })
+        .expect(200)
       const res = await request(app).get(`/stores/${resInsert.body._id}`).expect(200)
       expect(res.body).toHaveProperty('name')
       expect(res.body).toHaveProperty('description')
@@ -68,7 +75,11 @@ describe('Store Routes', () => {
 
   describe('PATCH /store', () => {
     it('should return store with 200 status ', async () => {
-      const resInsert = await request(app).post('/stores').set('Authorization', `bearer ${token}`).send({ store: newStore }).expect(200)
+      const resInsert = await request(app)
+        .post('/stores')
+        .set('Authorization', `bearer ${token}`)
+        .send({ store: newStore })
+        .expect(200)
 
       const updateStore: IStore = {
         name: faker.name.findName(),
@@ -99,7 +110,11 @@ describe('Store Routes', () => {
 
   describe('DELETE /store', () => {
     it('should delete store with 204 status ', async () => {
-      const resInsert = await request(app).post('/stores').set('Authorization', `bearer ${token}`).send({ store: newStore }).expect(200)
+      const resInsert = await request(app)
+        .post('/stores')
+        .set('Authorization', `bearer ${token}`)
+        .send({ store: newStore })
+        .expect(200)
       await request(app).delete(`/stores/${resInsert.body._id}`).set('Authorization', `bearer ${token}`).expect(204)
     })
 
