@@ -39,6 +39,7 @@ router.post('/register', async (req, res, next) => {
         user.email = email
         user.setPassword(password)
         await user.save()
+        console.log(user)
         res.json(user.toAuthJSON())
     } catch (e) {
         if (e.name === 'MongoError') return res.status(httpStatus.BAD_REQUEST).send(e)

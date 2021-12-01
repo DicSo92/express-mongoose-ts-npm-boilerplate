@@ -1,6 +1,6 @@
 import express from 'express'
 import helmet from 'helmet'
-// import xss from 'xss-clean'
+import xss from 'xss-clean'
 import mongoSanitize from 'express-mongo-sanitize'
 import compression from 'compression'
 import cors from 'cors'
@@ -35,7 +35,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 // sanitize request data
-// app.use(xss())
+app.use(xss())
 app.use(mongoSanitize())
 
 // gzip compression
