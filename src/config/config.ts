@@ -12,4 +12,6 @@ export const DB = {
     NAME: process.env.DB_NAME,
     PORT: Number(process.env.DB_PORT) || 27017,
 }
-export const DB_URI = process.env.DB_URI || 'mongodb://localhost:27017/decentralads-api?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false'
+export const DB_URI =
+    process.env.DB_URI ||
+    'mongodb://localhost:27017/decentralads-api?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false'
