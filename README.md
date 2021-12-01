@@ -35,7 +35,7 @@ cp .env.example .env
 -   **Logging**: using  [winston](https://github.com/winstonjs/winston)  and  [morgan](https://github.com/expressjs/morgan)
 -   **Testing**: unit and integration tests using  [Jest](https://jestjs.io/)
 -   **Error handling**: centralized error handling mechanism
--   **Dependency management**: with  [Yarn](https://yarnpkg.com/)
+-   **Dependency management**: with  [Npm](https://www.npmjs.com/)
 -   **Environment variables**: using  [dotenv](https://github.com/motdotla/dotenv)
 -   **Security**: set security HTTP headers using  [helmet](https://helmetjs.github.io/)
 -   **Compression**: gzip compression with  [compression](https://github.com/expressjs/compression)
@@ -46,33 +46,33 @@ cp .env.example .env
 ## Commands
 Running locally:
 ```bash
-yarn dev
+npm run dev
 ```
 building:
 ```bash
-yarn build
+npm run build
 ```
 Running production (build before use):
 ```bash
-yarn start
+npm run start
 ```
 
 Testing:
 ```bash
 # run all unit tests
-yarn test
+npm run test
 
 # run all unit tests in watch mode
-yarn test:watch
+npm run test:watch
 
 # run unit tests coverage
-yarn test:coverage
+npm run test:coverage
 
 # run all e2e tests
-yarn test:e2e
+npm run test:e2e
 
 # run all e2e tests in watch mode
-yarn test:e2e:watch
+npm run test:e2e:watch
 ```
 
 ## Enviroment Variable
